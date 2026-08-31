@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ===============================
+   CONTEÚDO
+================================ */
+
+.conteudo {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo-titulo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titulo-principal {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.titulo-secundario {
+    font-size: 16px;
+    color: #777;
+    font-weight: normal;
+}
+
+
+/* ===============================
+   CAMPO DA SENHA
+================================ */
+
+.conteudo-senha {
+    margin-bottom: 5px;
+}
+
+.conteudo-senha label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-weight: bold;
+    color: #333;
+}
+
+#campo-senha {
+    width: 100%;
+
+    padding: 15px;
+
+    font-size: 20px;
+    text-align: center;
+
+    border: 2px solid #ddd;
+    border-radius: 8px;
+
+    background: #f8f8f8;
+    color: #333;
+}
+
+
+/* ===============================
+   PARÂMETROS
+================================ */
+
+.parametro {
+    background: white;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 20px;
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.parametro-titulo {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.parametro-senha {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.parametro-senha:last-child {
+    border-bottom: none;
+}
+
+.parametro-senha__titulo {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+/* ===============================
+   CHECKBOXES
+================================ */
+
+.parametro-senha-checkbox {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 12px 0;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+}
+
+.parametro-senha-checkbox label {
+    cursor: pointer;
+    color: #555;
+}
+
+
+/* ===============================
+   BOTÕES DE TAMANHO
+================================ */
+
+.parametro-senha-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.parametro-senha__botao {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.parametro-senha__botao:hover {
+    background-color: #555;
+}
+
+.parametro-senha__texto {
+    font-size: 24px;
+
+    font-weight: bold;
+
+    min-width: 40px;
+
+    text-align: center;
+}
+
+
+/* ===============================
+   BARRA DE FORÇA
+================================ */
+
+.barra {
+    width: 100%;
+    height: 12px;
+
+    background-color: #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.barra::after {
+    content: "";
+
+    display: block;
+
+    height: 100%;
+    width: 0%;
+
+    border-radius: 10px;
+
+    transition: all 0.4s ease;
+}
+
+
+/* SENHA FRACA */
+
+.barra.fraca::after {
+    width: 33%;
+
+    background-color: #e74c3c;
+}
+
+
+/* SENHA MÉDIA */
+
+.barra.media::after {
+    width: 66%;
+
+    background-color: #f1c40f;
+}
+
+
+/* SENHA FORTE */
+
+.barra.forte::after {
+    width: 100%;
+
+    background-color: #2ecc71;
+}
+
+
+/* TEXTO DA FORÇA */
+
+.parametro-senha-textos {
+    text-align: center;
+
+    margin-top: 10px;
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+.texto-fraca {
+    color: #e74c3c;
+}
+
+.texto-media {
+    color: #d4a500;
+}
+
+.texto-forte {
+    color: #2ecc71;
+}
+
+
+/* ===============================
+   BOTÃO GERAR
+================================ */
+
+.botao-gerar {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+    transition: 0.2s;
+}
+
+.botao-gerar:hover {
+    background-color: #555;
+}
